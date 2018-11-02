@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Untitled Document</title>
-  <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="responsive-horizontal-playlist.css">
 
@@ -16,7 +15,7 @@
 
   <div style="display: block; position: relative; max-width: 100%;">
     <div style="padding-top: 56.25%;">
-      <video id="myPlayer"
+      <video-js id="myPlayer"
         data-playlist-id="2764931906001"
         data-account="1752604059001"
         data-player="H1TMG31PW"
@@ -24,15 +23,15 @@
         data-application-id
         class="video-js"
         controls
-        style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></video>
-      <script src="//players.brightcove.net/1752604059001/H1TMG31PW_default/index.min.js"></script>
+        style="width: 100%; height: 100%; position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px;"></video-js>
+      <script src="https://players.brightcove.net/1752604059001/H1TMG31PW_default/index.min.js"></script>
     </div>
   </div>
 
   <script src="responsive-horizontal-playlist.js"></script>
 
   <script type="text/javascript">
-    videojs('myPlayer').ready(function(){
+    videojs.getPlayer('myPlayerID').ready(function() {
       var player = this;
       player.customPlaylist();
     });
